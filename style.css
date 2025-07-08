@@ -1,12 +1,13 @@
-/* Reset và fonts */
+/* Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@200;300;400;500&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,400,0,0');
+
+/* Reset */
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+  margin: 0; padding: 0; box-sizing: border-box;
   font-family: 'Poppins', sans-serif;
 }
 
-/* Body */
 body {
   background: linear-gradient(#ECEFFE, #C5CFFC);
   display: flex;
@@ -23,29 +24,27 @@ body {
   background: rgba(255, 255, 255, 0.85);
   border-radius: 25px;
   padding: 30px;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.15);
   text-align: center;
   margin-bottom: 40px;
 }
 
-/* Hình ảnh của Profile */
 .image {
   width: 150px;
   height: 150px;
   margin: 0 auto;
   overflow: hidden;
   border-radius: 50%;
-  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: 0 5px 20px rgba(0,0,0,0.3);
 }
 
 .profile-pic {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Đảm bảo ảnh không bị méo, cắt bớt phần thừa */
+  object-fit: cover;
   display: block;
 }
 
-/* Thông tin Profile */
 .data h2 {
   margin-top: 15px;
   font-size: 2rem;
@@ -97,7 +96,7 @@ body {
 }
 
 .btn:hover {
-  box-shadow: inset 0 5px 20px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 5px 20px rgba(0,0,0,0.3);
 }
 
 /* Swiper Container */
@@ -112,11 +111,11 @@ body {
   padding-left: 0;
 }
 
-/* Mỗi Card trong slider */
+/* Each Card */
 .card-item {
   background: #fff;
   border-radius: 12px;
-  box-shadow: 0 10px 15px rgba(0, 0, 0, 0.1);
+  box-shadow: 0 10px 15px rgba(0,0,0,0.1);
   margin-right: 30px;
   flex-shrink: 0;
   width: 280px;
@@ -130,16 +129,13 @@ body {
   padding: 18px;
 }
 
-/* Hình ảnh của mỗi Card */
 .card-image {
   width: 100%;
-  height: 100%;
   border-radius: 10px;
-  object-fit: cover; /* Giữ tỷ lệ ảnh đúng, tránh méo */
-  aspect-ratio: 16 / 9; /* Đảm bảo tỷ lệ 16:9 cho các ảnh */
+  aspect-ratio: 16 / 9;
+  object-fit: cover;
 }
 
-/* Các badge như Developer, Designer */
 .badge {
   display: inline-block;
   padding: 7px 15px;
@@ -174,7 +170,6 @@ body {
   background: #fff3cd;
 }
 
-/* Tiêu đề và nút trong mỗi Card */
 .card-title {
   font-weight: 600;
   font-size: 1.1rem;
@@ -189,53 +184,3 @@ body {
   height: 35px;
   border-radius: 50%;
   cursor: pointer;
-  transition: all 0.3s ease;
-}
-
-.card-button:hover {
-  background: #5372F0;
-  color: #fff;
-}
-
-/* Các nút điều hướng swiper */
-.swiper-button-next,
-.swiper-button-prev {
-  color: #5372F0;
-}
-
-/* Pagination cho swiper */
-.swiper-pagination-bullet {
-  background-color: #5372F0;
-}
-
-/* Mobile Responsive */
-@media (max-width: 768px) {
-  .main {
-    padding: 20px;
-  }
-
-  .profile-pic {
-    width: 120px;
-    height: 120px;
-  }
-
-  .row {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .buttons {
-    flex-direction: column;
-    gap: 10px;
-  }
-
-  .container {
-    width: 100%;
-  }
-
-  .card-item {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-}
